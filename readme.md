@@ -6,3 +6,4 @@
 
 ## Usage
 ![page] (./photos/main.jpeg)
+![page] (./photos/web.jpeg)
