@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>IOT Control 1.0beta</title>
+  </head>
+
+  <body style="font-family:微軟正黑體; font-weight: bold;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">IOT Control 1.0beta｜冷氣</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">主控</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">設備</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">關於</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4 col-xs-12">
+          <div class="bg-faded p-2 mt-5">
+            <h2 class="text-muted">功能</h2>
+            <div
+              class="lead py-2 px-5"
+              style="background-color:white;max-height:265px;overflow-y:auto"
+            >
+              <button
+                id="A_0"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                電源
+              </button>
+              <button
+                id="A_1"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                擺葉
+              </button>
+              <button
+                id="A_2"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                睡眠
+              </button>
+              <hr />
+              <button
+                id="A_3"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                冷氣
+              </button>
+              <button
+                id="A_4"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                除溼
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xs-12">
+          <div class="bg-faded p-2 mt-5">
+            <h2 class="text-muted">溫度</h2>
+            <div
+              class="lead py-2 px-5"
+              style="background-color:white;max-height:257px;overflow-y:auto"
+            >
+              <button
+                id="TEMP_0"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                19
+              </button>
+              <button
+                id="TEMP_1"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                20
+              </button>
+              <button
+                id="TEMP_2"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                21
+              </button>
+              <button
+                id="TEMP_3"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                22
+              </button>
+              <button
+                id="TEMP_4"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                23
+              </button>
+              <button
+                id="TEMP_5"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                24
+              </button>
+              <button
+                id="TEMP_6"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                25
+              </button>
+              <button
+                id="TEMP_7"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                26
+              </button>
+              <button
+                id="TEMP_8"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                27
+              </button>
+              <button
+                id="TEMP_9"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                28
+              </button>
+              <button
+                id="TEMP_10"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                29
+              </button>
+              <button
+                id="TEMP_11"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                30
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xs-12">
+          <div class="bg-faded p-2 mt-5">
+            <h2 class="text-muted">風速</h2>
+            <div
+              class="lead py-2 px-5"
+              style="background-color:white;max-height:265px;overflow-y:auto"
+            >
+              <button
+                id="F_0"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                馬上清
+              </button>
+              <button
+                id="F_1"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                馬上冷
+              </button>
+              <button
+                id="F_2"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                強
+              </button>
+              <button
+                id="F_3"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                弱
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xs-12">
+          <div class="bg-faded p-2 mt-5">
+            <h2 class="text-muted">定時</h2>
+            <div
+              class="lead py-2 px-5"
+              style="background-color:white;max-height:254px;overflow-y:auto"
+            >
+              <button
+                id="TIME_0"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                2
+              </button>
+              <button
+                id="TIME_1"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                3
+              </button>
+              <button
+                id="TIME_2"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                4
+              </button>
+              <button
+                id="TIME_3"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                5
+              </button>
+              <button
+                id="TIME_4"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                8
+              </button>
+              <button
+                id="TIME_5"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                10
+              </button>
+              <button
+                id="TIME_6"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                12
+              </button>
+              <button
+                id="TIME_7"
+                onclick="simpleCall(this.id)"
+                class="btn btn-secondary btn-round btn-block"
+              >
+                清除
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <script>
+      function simpleCall(id) {
+        var new_id = id.split("_");
+        $.ajax({
+          type: "GET",
+          url: "/action?method=" + new_id[0] + "&id=" + new_id[1],
+          success: function() {}
+        });
+      }
+    </script>
+  </body>
+</html>
